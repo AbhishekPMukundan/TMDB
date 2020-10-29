@@ -110,6 +110,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="myTableView"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Oqc-pM-bPd"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="I2H-Yy-PlJ"/>
