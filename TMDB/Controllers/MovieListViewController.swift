@@ -54,9 +54,17 @@ extension MovieListViewController: UITableViewDataSource {
             cell.movieTitleLabel.text = movie.movieTitle
             cell.releaseDateLabel.text = movie.releaseDate
             cell.votingAverageLabel.text = "\(movie.votingAverage)%"
+            
+            cell.favButton.tag = indexPath.row
+            cell.favButton.addTarget(self, action: #selector(addTofav(sender:)), for: .touchUpInside)
         }
         
         return cell
+    }
+    
+    @objc func addTofav(sender: UIButton) {
+        sender.isSelected.toggle()
+        // TODO this is incomplete
     }
 }
 
